@@ -1,0 +1,35 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+     <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <h1> Tomato </h1><small> Your Tomato Timer </small>
+    <h2> Pomodoro </h2>
+    <div class="settings-group" id="pomodoro-selection">
+        <button type="button"> 15 </button>
+        <button type="button"> 25 </button>
+        <button type="button"> 45 </button>
+    </div>
+    <h2> Break </h2>
+    <div class="settings-group" id="break-selection">
+        <button type="button"> 5 </button>
+        <button type="button"> 10 </button>
+        <button type="button"> 15 </button>
+    </div>
+    <p> Break for <strong id="pomodoro"> 10 </strong> seconds after every <strong id="break"> 10</strong></strong> seconds.</p>
+    <a href="timer.html"><button type="button"> start </button></a>
+    <script type="text/javascript" src="popup.js"></script>
+  </body>
+</html>
